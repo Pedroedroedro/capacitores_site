@@ -1,0 +1,448 @@
+    <body>
+
+  <!-- HOME -->
+  <header class="home">
+
+  <h1>Capacitores e suas Aplicações</h1>
+
+  <div class="menu">
+
+  <div class="card-menu" onclick="abrirSecao('intro')">
+  <span>📘</span>
+  <p>Introdução</p>
+  </div>
+
+  <div class="card-menu" onclick="abrirSecao('energia')">
+  <span>⚡</span>
+  <p>Energia</p>
+  </div>
+
+  <div class="card-menu" onclick="abrirSecao('formula')">
+  <span>📐</span>
+  <p>Matemática</p>
+  </div>
+
+  <div class="card-menu" onclick="abrirSecao('simulador')">
+  <span>📊</span>
+  <p>Simulação</p>
+  </div>
+
+  <div class="card-menu" onclick="abrirSecao('ccca')">
+  <span>🔌</span>
+  <p>Circuitos</p>
+  </div>
+
+  <div class="card-menu" onclick="abrirSecao('aplicacoes')">
+  <span>🛠️</span>
+  <p>Aplicações</p>
+  </div>
+
+  <div class="card-menu" onclick="abrirSecao('real')">
+  <span>⚙️</span>
+  <p>Real vs Ideal</p>
+  </div>
+
+  <div class="card-menu" onclick="abrirSecao('conclusao')">
+  <span>🎯</span>
+  <p>Conclusão</p>
+  </div>
+
+  </div>
+
+  </header>
+
+
+    <!-- INTRO -->
+    <section id="intro" class="conteudo">
+
+    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+
+    <h2>O que é um capacitor?</h2>
+
+    <div class="duas-colunas">
+
+    <div>
+
+    <p>
+    Um capacitor é um dispositivo capaz de armazenar energia elétrica na forma de um campo elétrico estabelecido entre dois condutores separados por um material isolante, chamado dielétrico. Diferente de uma bateria, ele não produz energia nem cria carga elétrica: sua função é separar cargas já existentes.
+    </p>
+
+    <p>
+    Quando conectado a uma fonte, elétrons são deslocados de uma placa para outra, gerando um acúmulo de cargas opostas. Essa separação cria uma diferença de potencial e um campo elétrico, que é onde a energia fica armazenada.
+    </p>
+
+    <div class="formula">
+    C = <span>Q</span> / <span>V</span>
+    </div>
+
+    <p>
+    Essa equação mostra que a capacitância mede a capacidade de armazenar carga por unidade de tensão.
+    </p>
+
+    <div class="formula">
+    C = ε · A / d
+    </div>
+
+    <p>
+    Essa expressão revela algo fundamental: a capacitância depende diretamente da geometria do sistema físico. Aumentar a área das placas aumenta a capacidade de armazenamento, enquanto aumentar a distância reduz essa capacidade. O material dielétrico também influencia fortemente através da permissividade elétrica.
+    </p>
+
+    </div>
+
+    <div class="image-box">[Imagem do capacitor]</div>
+
+    </div>
+    </section>
+
+
+    <!-- ANIMAÇÃO -->
+    <section id="animacao" class="conteudo">
+
+    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+
+    <h2>Carregamento do Capacitor</h2>
+
+    <p>
+    Durante o carregamento, elétrons se acumulam em uma das placas enquanto são removidos da outra. Isso cria um campo elétrico crescente entre elas. Esse processo não ocorre instantaneamente, pois depende da resistência do circuito e da capacitância do sistema.
+    </p>
+
+    <p>
+    A formação desse campo elétrico é o que armazena energia no capacitor. Quanto maior a diferença de potencial entre as placas, maior o campo elétrico e maior a energia armazenada.
+    </p>
+
+    <div class="capacitor-box">
+    <div class="placa"></div>
+    <div id="campo"></div>
+    <div class="placa"></div>
+    </div>
+
+    <button onclick="carregarCapacitor()">Simular carga</button>
+
+    </section>
+
+
+    <!-- ENERGIA -->
+    <section id="energia" class="conteudo">
+
+    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+
+    <h2>Energia armazenada</h2>
+
+    <div class="duas-colunas">
+
+    <div>
+
+    <div class="formula">
+    U = ½ · C · V²
+    </div>
+
+    <p>
+    A energia de um capacitor não está localizada em um ponto específico, mas distribuída no campo elétrico entre as placas. Essa é uma diferença conceitual importante em relação a sistemas mecânicos ou térmicos.
+    </p>
+
+    <p>
+    A dependência quadrática da tensão indica que dobrar a tensão quadruplica a energia armazenada. Isso torna a tensão (ou DDP) um fator extremamente relevante no projeto de circuitos.
+    </p>
+
+    <p>
+    Na prática, essa energia pode ser liberada rapidamente, o que permite ao capacitor atuar como um reservatório temporário, estabilizando tensões e fornecendo energia em momentos de pico.
+    </p>
+
+    </div>
+
+    <div class="image-box">[Campo elétrico]</div>
+
+    </div>
+
+    </section>
+
+
+    <!-- MATEMÁTICA -->
+    <section id="formula" class="conteudo">
+
+    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+
+    <h2>Comportamento matemático</h2>
+
+    <p>
+    O comportamento dinâmico do capacitor é descrito pela relação entre corrente e variação da tensão:
+    </p>
+
+    <div class="formula">
+    i(t) = C · dv/dt
+    </div>
+
+    <p>
+    Essa equação mostra que o capacitor responde apenas a variações de tensão. Se a tensão for constante, não há corrente. Se a tensão variar rapidamente, a corrente pode ser elevada.
+    </p>
+
+    <div class="formula">
+    τ = R · C
+    </div>
+
+    <p>
+    A constante de tempo determina a velocidade de resposta do circuito. Ela define a escala temporal do carregamento e da descarga.
+    </p>
+
+    <div class="formula">
+    Xc = 1 / (2π · f · C)
+    </div>
+
+    <p>
+    Em corrente alternada, o capacitor apresenta uma oposição chamada reatância capacitiva. Ela depende da frequência: sinais de alta frequência passam com facilidade, enquanto sinais de baixa frequência são bloqueados.
+    </p>
+
+    </section>
+
+
+    <!-- SIMULADOR -->
+    <section id="simulador" class="conteudo">
+
+    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+
+    <h2>Simulação RC</h2>
+
+    <div class="duas-colunas">
+
+    <div>
+
+    <p>
+    Em um circuito RC, o carregamento do capacitor segue uma evolução exponencial:
+    </p>
+
+    <div class="formula">
+    V<sub>C</sub>(t) = V₀ (1 − e<sup>−t/RC</sup>)
+    </div>
+
+    <p>
+    Isso significa que o capacitor nunca atinge instantaneamente o valor final, mas se aproxima dele ao longo do tempo.
+    </p>
+
+    <p>
+    Em t = τ, a tensão atinge aproximadamente 63,2% do valor final, o que define uma referência importante para análise temporal.
+    </p>
+
+    <label>Resistência (Ω)</label>
+    <input type="range" id="resistor" min="100" max="100000" value="1000">
+    <p id="Rvalor">1000 Ω</p>
+
+    <label>Capacitância (μF)</label>
+    <input type="range" id="capacitor" min="1" max="100" value="10">
+    <p id="Cvalor">10 μF</p>
+
+    <h3 id="tauResultado">τ = 0.01 s</h3>
+
+    </div>
+
+    <div>
+    <canvas id="graficoRC" width="600" height="400"></canvas>
+    </div>
+
+    </div>
+
+    </section>
+
+
+    <!-- CIRCUITOS -->
+    <section id="ccca" class="conteudo">
+
+    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+
+    <h2>Comportamento em circuitos</h2>
+
+    <div class="duas-colunas">
+
+    <div>
+
+    <p>
+    O comportamento do capacitor em circuitos elétricos é dado pela equação:
+    </p>
+
+    <div class="formula">
+    i(t) = C · dv/dt
+    </div>
+
+    <p>
+    Isso significa que ele responde apenas a variações de tensão. Em corrente contínua, após o carregamento, a corrente zera e o capacitor se comporta como circuito aberto.
+    </p>
+
+    <h3>Carga</h3>
+
+    <div class="formula">
+    V<sub>C</sub>(t) = V₀ (1 − e<sup>−t/RC</sup>)
+    </div>
+
+    <h3>Descarga</h3>
+
+    <div class="formula">
+    V<sub>C</sub>(t) = V₀ e<sup>−t/RC</sup>
+    </div>
+
+    <h3>Constante de tempo</h3>
+
+    <div class="formula">
+    τ = R · C
+    </div>
+
+    <p>
+    Essa constante define a velocidade do processo: quanto maior, mais lento o circuito responde.
+    </p>
+
+    <h3>Corrente alternada</h3>
+
+    <div class="formula">
+    Xc = 1 / (2π f C)
+    </div>
+
+    <p>
+    Em altas frequências, o capacitor conduz melhor; em baixas, ele bloqueia o sinal.
+    </p>
+
+    </div>
+
+    <div class="image-box">
+    [Gráfico RC ou senoide com defasagem]
+    </div>
+
+    </div>
+
+    </section>
+
+
+    <!-- APLICAÇÕES -->
+    <section id="aplicacoes" class="conteudo">
+
+    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+
+    <h2>Aplicações</h2>
+
+    <div class="duas-colunas">
+
+    <div>
+
+    <p>
+    Capacitores são fundamentais na eletrônica moderna por sua capacidade de armazenar energia e responder rapidamente.
+    </p>
+
+    <h3>Filtragem</h3>
+    <p>
+    Após retificação, a tensão possui ondulações. O capacitor suaviza esse efeito armazenando energia nos picos e liberando nas baixas.
+    </p>
+
+    <h3>Desacoplamento</h3>
+    <p>
+    Fornece corrente instantânea para circuitos digitais, evitando quedas de tensão.
+    </p>
+
+    <h3>Acoplamento</h3>
+    <p>
+    Bloqueia corrente contínua e permite sinais alternados.
+    </p>
+
+    <h3>Temporização</h3>
+    <p>
+    Circuitos RC criam atrasos controlados usando comportamento exponencial.
+    </p>
+
+    <h3>Supercapacitores</h3>
+    <p>
+    Utilizados para armazenamento rápido de energia e sistemas modernos.
+    </p>
+
+    </div>
+
+    <div class="image-box">
+    [Placa eletrônica real / fonte com capacitor]
+    </div>
+
+    </div>
+
+    </section>
+
+
+    <!-- REAL -->
+    <section id="real" class="conteudo">
+
+    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+
+    <h2>Capacitor real vs ideal</h2>
+
+    <div class="duas-colunas">
+
+    <div>
+
+    <p>
+    Capacitores reais possuem limitações físicas que afetam seu desempenho.
+    </p>
+
+    <h3>ESR</h3>
+
+    <div class="formula">
+    P = I² · ESR
+    </div>
+
+    <p>
+    Causa perdas de energia e aquecimento.
+    </p>
+
+    <h3>ESL</h3>
+
+    <p>
+    Indutância parasita que domina em altas frequências.
+    </p>
+
+    <h3>Frequência</h3>
+
+    <p>
+    O capacitor real não melhora indefinidamente com frequência.
+    </p>
+
+    <h3>Ruptura dielétrica</h3>
+
+    <p>
+    Excesso de tensão pode causar falha do componente.
+    </p>
+
+    </div>
+
+    <div class="image-box">
+    [Modelo equivalente com ESR e ESL]
+    </div>
+
+    </div>
+
+    </section>
+
+    <!-- CONCLUSÃO -->
+    <section id="conclusao" class="conteudo">
+
+    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+
+    <h2>Conclusão</h2>
+
+    <p>
+    O capacitor é um componente fundamental porque atua simultaneamente em três dimensões essenciais dos circuitos elétricos:
+    </p>
+
+    <p>
+    <strong>Energia:</strong> armazena e libera energia rapidamente<br>
+    <strong>Tempo:</strong> introduz comportamento exponencial e memória<br>
+    <strong>Frequência:</strong> responde de forma diferente conforme o sinal varia
+    </p>
+
+    <p>
+    Essa combinação explica por que ele aparece em praticamente todos os sistemas eletrônicos, desde fontes de alimentação até circuitos de comunicação e sistemas de potência.
+    </p>
+
+    <p>
+    Mais do que um simples componente, o capacitor é uma ferramenta que permite controlar o comportamento físico dos circuitos elétricos.
+    </p>
+
+    </section>
+
+
+    <footer>
+    Desenvolvido por Pedro Henrique Andrade Castro — 2024055642
+    </footer>
+
+    </body>
