@@ -24,24 +24,19 @@
   <p>Introdução</p>
   </div>
 
+  <div class="card-menu" onclick="abrirSecao('animacao')">
+  <span>➕</span>
+  <p>Animação Carga</p>
+  </div>
+    
   <div class="card-menu" onclick="abrirSecao('energia')">
   <span>⚡</span>
   <p>Energia</p>
   </div>
 
-  <div class="card-menu" onclick="abrirSecao('formula')">
-  <span>📐</span>
-  <p>Matemática</p>
-  </div>
-
   <div class="card-menu" onclick="abrirSecao('ccca')">
   <span>🔌</span>
   <p>Circuitos</p>
-  </div>
-
-  <div class="card-menu" onclick="abrirSecao('animacao')">
-  <span>➕</span>
-  <p>Animação Carga</p>
   </div>
 
   <div class="card-menu" onclick="abrirSecao('simulador')">
@@ -228,7 +223,7 @@
     <div>
 
     <p>
-    Em um circuito RC, o carregamento do capacitor segue uma evolução exponencial:
+    Como vimos anteriormente, em um circuito RC o carregamento do capacitor segue uma evolução exponencial:
     </p>
 
     <div class="formula">
@@ -306,7 +301,7 @@ V<sub>C</sub>(t) = V₀ e<sup>−t/RC</sup>
 </div>
 
 <p>
-Essa constante define a velocidade do processo: quanto maior, mais lento o circuito responde.
+A constante de tempo determina a velocidade de resposta do circuito. Ela define a escala temporal do carregamento e da descarga.
 </p>
 
 <h3>Corrente alternada</h3>
@@ -316,7 +311,7 @@ Xc = 1 / (2π f C)
 </div>
 
 <p>
-Em altas frequências, o capacitor conduz melhor; em baixas, ele bloqueia o sinal.
+ Em corrente alternada, o capacitor apresenta uma oposição chamada reatância capacitiva. Ela depende da frequência: sinais de alta frequência passam com facilidade, enquanto sinais de baixa frequência são bloqueados.
 </p>
 
 </div>
@@ -326,8 +321,6 @@ Em altas frequências, o capacitor conduz melhor; em baixas, ele bloqueia o sina
 </div>
 
 </div>
-
-<!-- ================= NOVA PARTE ================= -->
 
 <h2>Associação de capacitores</h2>
 
