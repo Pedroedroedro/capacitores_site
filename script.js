@@ -38,7 +38,7 @@ let intervalo=setInterval(function(){
 carga++;
 campo.innerHTML="+".repeat(carga)+" | -".repeat(carga);
 
-if(carga>=8){
+if(carga>=5){
 clearInterval(intervalo);
 }
 
