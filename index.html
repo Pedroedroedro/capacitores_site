@@ -264,68 +264,144 @@
     </section>
 
 
-    <!-- CIRCUITOS -->
-    <section id="ccca" class="conteudo">
+   <!-- CIRCUITOS -->
+<section id="ccca" class="conteudo">
 
-    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+<button class="voltar" onclick="voltarHome()">← Voltar</button>
 
-    <h2>Comportamento em circuitos</h2>
+<h2>Comportamento em circuitos</h2>
 
-    <div class="duas-colunas">
+<div class="duas-colunas">
 
-    <div>
+<div>
 
-    <p>
-    O comportamento do capacitor em circuitos elétricos é dado pela equação:
-    </p>
+<p>
+O comportamento do capacitor em circuitos elétricos é dado pela equação:
+</p>
 
-    <div class="formula">
-    i(t) = C · dv/dt
-    </div>
+<div class="formula">
+i(t) = C · dv/dt
+</div>
 
-    <p>
-    Isso significa que ele responde apenas a variações de tensão. Em corrente contínua, após o carregamento, a corrente zera e o capacitor se comporta como circuito aberto.
-    </p>
+<p>
+Isso significa que ele responde apenas a variações de tensão. Em corrente contínua, após o carregamento, a corrente zera e o capacitor se comporta como circuito aberto.
+</p>
 
-    <h3>Carga</h3>
+<h3>Carga</h3>
 
-    <div class="formula">
-    V<sub>C</sub>(t) = V₀ (1 − e<sup>−t/RC</sup>)
-    </div>
+<div class="formula">
+V<sub>C</sub>(t) = V₀ (1 − e<sup>−t/RC</sup>)
+</div>
 
-    <h3>Descarga</h3>
+<h3>Descarga</h3>
 
-    <div class="formula">
-    V<sub>C</sub>(t) = V₀ e<sup>−t/RC</sup>
-    </div>
+<div class="formula">
+V<sub>C</sub>(t) = V₀ e<sup>−t/RC</sup>
+</div>
 
-    <h3>Constante de tempo</h3>
+<h3>Constante de tempo</h3>
 
-    <div class="formula">
-    τ = R · C
-    </div>
+<div class="formula">
+τ = R · C
+</div>
 
-    <p>
-    Essa constante define a velocidade do processo: quanto maior, mais lento o circuito responde.
-    </p>
+<p>
+Essa constante define a velocidade do processo: quanto maior, mais lento o circuito responde.
+</p>
 
-    <h3>Corrente alternada</h3>
+<h3>Corrente alternada</h3>
 
-    <div class="formula">
-    Xc = 1 / (2π f C)
-    </div>
+<div class="formula">
+Xc = 1 / (2π f C)
+</div>
 
-    <p>
-    Em altas frequências, o capacitor conduz melhor; em baixas, ele bloqueia o sinal.
-    </p>
+<p>
+Em altas frequências, o capacitor conduz melhor; em baixas, ele bloqueia o sinal.
+</p>
 
-    </div>
-    <div class="image-box">
-    <img src="circuito.jpg" alt="">
-    </div>
-    </div>
+</div>
 
-    </section>
+<div class="image-box">
+<img src="circuito.jpg" alt="">
+</div>
+
+</div>
+
+<!-- ================= NOVA PARTE ================= -->
+
+<h2>Associação de capacitores</h2>
+
+<p>
+Assim como resistores, capacitores podem ser associados em série ou em paralelo, alterando a capacitância equivalente do circuito e o comportamento de armazenamento de energia.
+</p>
+
+<h3>Capacitores em paralelo</h3>
+
+<p>
+Quando capacitores estão em paralelo, todos estão submetidos à mesma diferença de potencial. Nesse caso, a capacitância equivalente é a soma direta das capacitâncias individuais:
+</p>
+
+<div class="formula">
+C<sub>eq</sub> = C₁ + C₂ + C₃ + ...
+</div>
+
+<p>
+Isso ocorre porque a área efetiva de armazenamento aumenta. Cada capacitor contribui diretamente para armazenar mais carga total no sistema.
+</p>
+
+<p>
+Nesse tipo de associação:
+<br>• A tensão é a mesma em todos os capacitores
+<br>• As cargas se somam
+<br>• A capacitância equivalente é maior que qualquer capacitor individual
+</p>
+
+<div class="image-box">
+<img src="paralelo.jpg" alt="">
+</div>
+
+<h3>Capacitores em série</h3>
+
+<p>
+Quando capacitores estão em série, a carga armazenada em cada um é a mesma, mas a tensão se divide entre eles. A capacitância equivalente é dada por:
+</p>
+
+<div class="formula">
+1 / C<sub>eq</sub> = 1/C₁ + 1/C₂ + 1/C₃ + ...
+</div>
+
+<p>
+Nesse caso, a capacitância equivalente sempre será menor que qualquer capacitor individual, pois o sistema se comporta como se a distância entre placas aumentasse.
+</p>
+
+<p>
+Nesse tipo de associação:
+<br>• A carga é a mesma em todos os capacitores
+<br>• A tensão se divide entre eles
+<br>• A capacitância equivalente diminui
+</p>
+
+<div class="image-box">
+<img src="serie.jpg" alt="">
+</div>
+
+<h3>Interpretação física</h3>
+
+<p>
+A diferença entre as associações pode ser entendida fisicamente:
+</p>
+
+<p>
+<strong>Paralelo:</strong> aumenta a área efetiva → maior capacidade de armazenar carga  
+<br>
+<strong>Série:</strong> aumenta a distância efetiva → menor capacidade de armazenar carga
+</p>
+
+<p>
+Essas configurações são amplamente utilizadas em circuitos reais para ajustar valores de capacitância, suportar maiores tensões ou adaptar o comportamento do circuito conforme necessário.
+</p>
+
+</section>
 
 
     <!-- APLICAÇÕES -->
