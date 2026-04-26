@@ -398,112 +398,196 @@ Essas configurações são amplamente utilizadas em circuitos reais para ajustar
 
 
     <!-- APLICAÇÕES -->
-    <section id="aplicacoes" class="conteudo">
+<section id="aplicacoes" class="conteudo">
 
-    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+<button class="voltar" onclick="voltarHome()">← Voltar</button>
 
-    <h2>Aplicações</h2>
+<h2>Aplicações</h2>
 
-    <div class="duas-colunas">
+<div class="duas-colunas">
 
-    <div>
+<div>
 
-    <p>
-    Capacitores são fundamentais na eletrônica moderna por sua capacidade de armazenar energia e responder rapidamente.
-    </p>
+<p>
+Capacitores são fundamentais na eletrônica moderna por sua capacidade de armazenar energia, responder rapidamente a variações de tensão e influenciar diretamente o comportamento temporal e frequencial dos circuitos.
+</p>
 
-    <h3>Filtragem</h3>
-    <p>
-    Após retificação, a tensão possui ondulações. O capacitor suaviza esse efeito armazenando energia nos picos e liberando nas baixas.
-    </p>
+<h3>Filtragem</h3>
+<p>
+Em fontes de alimentação, após o processo de retificação da corrente alternada, a tensão resultante não é perfeitamente contínua, apresentando ondulações (ripple). O capacitor atua como um filtro, armazenando energia nos picos de tensão e liberando-a nos intervalos em que a tensão tende a cair.
+</p>
 
-    <h3>Desacoplamento</h3>
-    <p>
-    Fornece corrente instantânea para circuitos digitais, evitando quedas de tensão.
-    </p>
+<p>
+Esse processo reduz significativamente as variações na saída, tornando o sinal mais estável. Quanto maior a capacitância, menor será a ondulação, o que é essencial para o funcionamento adequado de circuitos eletrônicos sensíveis.
+</p>
 
-    <h3>Acoplamento</h3>
-    <p>
-    Bloqueia corrente contínua e permite sinais alternados.
-    </p>
+<h3>Desacoplamento (Bypass)</h3>
+<p>
+Capacitores de desacoplamento são utilizados próximos a componentes eletrônicos, especialmente circuitos integrados, para estabilizar a tensão de alimentação. Eles fornecem corrente instantânea em momentos de demanda rápida, como mudanças de estado em circuitos digitais.
+</p>
 
-    <h3>Temporização</h3>
-    <p>
-    Circuitos RC criam atrasos controlados usando comportamento exponencial.
-    </p>
+<p>
+Além disso, atuam como filtros locais, desviando ruídos de alta frequência para o terra, evitando interferências e garantindo maior estabilidade e confiabilidade no funcionamento do circuito.
+</p>
 
-    <h3>Supercapacitores</h3>
-    <p>
-    Utilizados para armazenamento rápido de energia e sistemas modernos.
-    </p>
+<h3>Acoplamento de sinais</h3>
+<p>
+No acoplamento entre estágios de um circuito (como em amplificadores), capacitores são usados para permitir a passagem de sinais alternados enquanto bloqueiam componentes contínuas (DC).
+</p>
 
-    </div>
+<p>
+Isso é importante porque diferentes estágios podem operar em níveis de tensão distintos. O capacitor garante que apenas a informação do sinal (variação) seja transmitida, evitando deslocamentos indesejados de nível DC.
+</p>
 
-   <div class="image-box">
-  <img src="retificador.jpg" alt=Fonte de alimentação com retificador"">
+<h3>Temporização e circuitos RC</h3>
+<p>
+Capacitores, em conjunto com resistores, formam circuitos RC capazes de gerar atrasos controlados no tempo. Esses circuitos são amplamente utilizados em temporizadores, osciladores, filtros e sistemas de controle.
+</p>
+
+<p>
+A constante de tempo τ = R · C define a velocidade de carga e descarga, permitindo prever com precisão o comportamento do circuito ao longo do tempo. Esse princípio é usado, por exemplo, em piscadores, reset de sistemas digitais e controle de sinais.
+</p>
+
+<h3>Armazenamento de energia (Supercapacitores)</h3>
+<p>
+Supercapacitores possuem capacitâncias muito elevadas e são capazes de armazenar grandes quantidades de energia. Diferente de baterias, eles podem carregar e descarregar rapidamente e suportam um número muito maior de ciclos.
+</p>
+
+<p>
+São utilizados em aplicações como backup de energia, sistemas automotivos (start-stop), armazenamento temporário em dispositivos eletrônicos e até em sistemas de recuperação de energia.
+</p>
+
+<h3>Correção de fator de potência</h3>
+<p>
+Em sistemas elétricos de potência, capacitores são utilizados para corrigir o fator de potência, compensando efeitos indutivos de cargas como motores e transformadores.
+</p>
+
+<p>
+Isso reduz perdas na rede, melhora a eficiência energética e diminui a sobrecarga em linhas de transmissão, sendo essencial em instalações industriais e sistemas de distribuição de energia.
+</p>
+
+<h3>Filtros em frequência</h3>
+<p>
+Capacitores também são usados em filtros analógicos, como passa-baixa, passa-alta e passa-faixa. Sua reatância depende da frequência, permitindo controlar quais sinais são atenuados ou transmitidos.
+</p>
+
+<p>
+Esse princípio é fundamental em aplicações como áudio, comunicações e processamento de sinais, onde é necessário separar ou limpar determinadas faixas de frequência.
+</p>
+
 </div>
 
-    </div>
+<div class="image-box">
+  <img src="retificador.jpg" alt="Fonte de alimentação com retificador">
+</div>
 
-    </section>
+</div>
+
+</section>
 
 
     <!-- REAL -->
-    <section id="real" class="conteudo">
+<section id="real" class="conteudo">
 
-    <button class="voltar" onclick="voltarHome()">← Voltar</button>
+<button class="voltar" onclick="voltarHome()">← Voltar</button>
 
-    <h2>Capacitor real vs ideal</h2>
+<h2>Capacitor real vs ideal</h2>
 
-    <div class="duas-colunas">
+<div class="duas-colunas">
 
-    <div>
+<div>
 
-    <p>
-    Capacitores reais possuem limitações físicas que afetam seu desempenho.
-    </p>
+<p>
+Capacitores ideais são modelos teóricos que armazenam energia sem perdas e respondem instantaneamente às variações de tensão. No entanto, capacitores reais possuem limitações físicas decorrentes de sua construção, materiais e geometria, o que afeta diretamente seu desempenho em circuitos práticos.
+</p>
 
-    <p>
-   Algumas delas são:
-    </p>
+<p>
+Essas não idealidades tornam o comportamento do capacitor dependente da frequência, temperatura e condições de operação. Algumas das principais limitações são:
+</p>
 
-    <h3>ESR (Equivalent Series Resistance)</h3>
+<h3>ESR (Equivalent Series Resistance)</h3>
 
-    <div class="formula">
-    P = I² · ESR
-    </div>
-
-    <p>
-    Causa perdas de energia e aquecimento.
-    </p>
-
-    <h3>ESL (Equivalent Series Inductance)</h3>
-
-    <p>
-    Indutância parasita que domina em altas frequências.
-    </p>
-
-    <h3>Frequência</h3>
-
-    <p>
-    O capacitor real não melhora indefinidamente com frequência.
-    </p>
-
-    <h3>Ruptura dielétrica</h3>
-
-    <p>
-    Excesso de tensão pode causar falha do componente.
-    </p>
-
-    </div>
-
-    <div class="image-box">
-  <img src="ESR.jpg" alt="">
+<div class="formula">
+P = I² · ESR
 </div>
 
-    </div>
+<p>
+O ESR representa resistências internas do capacitor, como perdas no dielétrico, nos terminais e nas conexões internas. Ele causa dissipação de energia na forma de calor, reduzindo a eficiência do componente.
+</p>
 
-    </section>
+<p>
+Em aplicações de alta corrente, como fontes chaveadas, um ESR elevado pode causar aquecimento excessivo, queda de tensão e até falha do componente. Por isso, capacitores de baixo ESR são preferidos em aplicações de potência.
+</p>
+
+<h3>ESL (Equivalent Series Inductance)</h3>
+
+<p>
+A ESL modela a indutância parasita associada aos terminais e à construção física do capacitor. Em altas frequências, esse efeito se torna dominante, fazendo com que o capacitor deixe de se comportar como tal e passe a apresentar comportamento indutivo.
+</p>
+
+<p>
+Isso limita sua eficácia em filtragem de sinais de alta frequência, sendo necessário o uso de capacitores menores e em paralelo (como cerâmicos) para compensar esse efeito.
+</p>
+
+<h3>Dependência com a frequência</h3>
+
+<p>
+A impedância de um capacitor real não segue perfeitamente o modelo ideal. Em baixas frequências, ele se comporta de forma próxima ao ideal, mas à medida que a frequência aumenta, os efeitos de ESR e ESL alteram significativamente sua resposta.
+</p>
+
+<p>
+Existe uma frequência de ressonância onde a reatância capacitiva e a indutiva se igualam. Nesse ponto, a impedância é mínima. Acima dessa frequência, o capacitor passa a se comportar como um indutor.
+</p>
+
+<h3>Ruptura dielétrica</h3>
+
+<p>
+O dielétrico possui um limite máximo de campo elétrico que pode suportar. Quando a tensão aplicada excede esse limite, ocorre a ruptura dielétrica, causando falha permanente do componente.
+</p>
+
+<p>
+Por isso, capacitores possuem uma tensão nominal especificada. Operar próximo ou acima desse valor pode comprometer a confiabilidade e reduzir a vida útil do dispositivo.
+</p>
+
+<h3>Corrente de fuga</h3>
+
+<p>
+Capacitores reais não são perfeitamente isolantes. Existe uma pequena corrente de fuga através do dielétrico, o que faz com que a carga armazenada diminua ao longo do tempo.
+</p>
+
+<p>
+Esse efeito é especialmente relevante em capacitores eletrolíticos e pode impactar circuitos que dependem de armazenamento prolongado de carga.
+</p>
+
+<h3>Tolerância e variação de capacitância</h3>
+
+<p>
+O valor de capacitância informado pelo fabricante não é exato, podendo variar dentro de uma faixa (tolerância). Além disso, fatores como temperatura, envelhecimento e tensão aplicada podem alterar esse valor ao longo do tempo.
+</p>
+
+<p>
+Isso é crítico em circuitos de precisão, onde pequenas variações podem afetar significativamente o desempenho.
+</p>
+
+<h3>Modelo equivalente</h3>
+
+<p>
+Para representar um capacitor real, utiliza-se um modelo equivalente composto por um capacitor ideal em série com uma resistência (ESR) e uma indutância (ESL). Esse modelo permite prever com maior precisão o comportamento em diferentes condições de operação.
+</p>
+
+<p>
+Essa abordagem é essencial em projetos de alta frequência e eletrônica de potência, onde as não idealidades influenciam diretamente o funcionamento do circuito.
+</p>
+
+</div>
+
+<div class="image-box">
+  <img src="ESR.jpg" alt="Modelo equivalente de capacitor real com ESR e ESL">
+</div>
+
+</div>
+
+</section>
 
     <!-- CONCLUSÃO -->
     <section id="conclusao" class="conteudo">
