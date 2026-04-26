@@ -1,0 +1,283 @@
+/* IMPORTAÇÃO DE FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body{
+margin:0;
+font-family:'Inter', sans-serif;
+background:#0f172a;
+color:#e5e7eb;
+line-height:1.9;
+}
+
+
+/* ================= HOME ================= */
+
+.home{
+display:flex; /* CORREÇÃO */
+flex-direction:column; /* CORREÇÃO */
+align-items:center; /* CORREÇÃO */
+justify-content:center; /* CORREÇÃO */
+text-align:center;
+padding:160px 30px;
+background:linear-gradient(135deg,#1e3a8a,#06b6d4);
+}
+
+.home h1{
+font-size:64px;
+margin-bottom:20px;
+font-weight:700;
+width:100%; /* CORREÇÃO */
+}
+
+.home p{
+font-size:24px;
+opacity:0.9;
+margin-bottom:50px;
+width:100%; /* CORREÇÃO */
+}
+
+
+/* ================= MENU ================= */
+
+.menu{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:30px;
+max-width:900px;
+margin:60px auto;
+padding:0 20px;
+width:100%; /* CORREÇÃO */
+}
+
+
+/* CARD DO MENU */
+.card-menu{
+height:180px;
+background:rgba(255,255,255,0.08);
+border-radius:20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+transition:all 0.3s ease;
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.1);
+text-align:center;
+}
+
+
+/* HOVER */
+.card-menu:hover{
+transform:translateY(-8px) scale(1.03);
+background:rgba(255,255,255,0.18);
+}
+
+
+/* ÍCONE */
+.card-menu span{
+font-size:56px;
+display:block;
+margin-bottom:12px;
+}
+
+
+/* TEXTO DO CARD */
+.card-menu p{
+font-size:18px;
+font-weight:600;
+margin:0;
+max-width:none;
+text-align:center;
+}
+
+
+/* ================= SEÇÕES ================= */
+
+section{
+max-width:1200px;
+margin:auto;
+padding:120px 50px;
+display:none;
+}
+
+.conteudo.ativa{
+display:block;
+}
+
+section:nth-of-type(even){
+background:#020617;
+}
+
+
+/* ================= TIPOGRAFIA ================= */
+
+h2{
+font-size:52px;
+margin-bottom:40px;
+font-weight:700;
+}
+
+p{
+font-size:20px;
+max-width:800px;
+text-align:justify;
+margin-bottom:25px;
+color:#e5e7eb;
+}
+
+
+/* ================= GRID ================= */
+
+.duas-colunas{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+margin-top:40px;
+}
+
+@media(max-width:900px){
+.duas-colunas{
+grid-template-columns:1fr;
+}
+}
+
+
+/* ================= IMAGEM ================= */
+
+.image-box{
+height:350px;
+background:#1e293b;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#64748b;
+font-size:18px;
+text-align:center;
+}
+
+
+/* ================= FORMULAS ================= */
+
+.formula{
+background:#020617;
+padding:25px;
+font-size:30px;
+text-align:center;
+border-radius:15px;
+margin:40px 0;
+border-left:5px solid #22c55e;
+font-family:"Courier New", monospace;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.formula span{
+font-style:italic;
+}
+
+.formula sub{
+font-size:18px;
+}
+
+.formula sup{
+font-size:18px;
+}
+
+
+/* ================= SIMULADOR ================= */
+
+input[type="range"]{
+width:100%;
+margin:20px 0;
+}
+
+#tauResultado{
+font-size:32px;
+color:#22c55e;
+font-weight:600;
+}
+
+
+/* ================= CANVAS ================= */
+
+canvas{
+width:100%;
+max-width:600px;
+background:white;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+
+/* ================= ANIMAÇÃO ================= */
+
+.capacitor-box{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+margin:50px 0;
+}
+
+.placa{
+width:20px;
+height:150px;
+background:white;
+border-radius:5px;
+}
+
+#campo{
+width:250px;
+height:80px;
+border:2px dashed #06b6d4;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+border-radius:10px;
+}
+
+
+/* ================= BOTÕES ================= */
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+background:white;
+color:black;
+font-weight:600;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+
+/* BOTÃO VOLTAR */
+.voltar{
+margin-bottom:40px;
+background:#22c55e;
+color:black;
+}
+
+.voltar:hover{
+background:#16a34a;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+text-align:center;
+padding:60px;
+background:#020617;
+margin-top:80px;
+font-size:16px;
+color:#94a3b8;
+}
