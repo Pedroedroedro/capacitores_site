@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function(){
+
 const resistor=document.getElementById("resistor");
 const capacitor=document.getElementById("capacitor");
 const Rvalor=document.getElementById("Rvalor");
@@ -5,6 +7,8 @@ const Cvalor=document.getElementById("Cvalor");
 const tauResultado=document.getElementById("tauResultado");
 
 function atualizar(){
+
+if(!resistor || !capacitor) return;
 
 let R=parseFloat(resistor.value);
 let Cmicro=parseFloat(capacitor.value);
@@ -18,10 +22,11 @@ tauResultado.innerHTML="τ = "+tau.toFixed(4)+" s";
 desenharGrafico(tau);
 }
 
+if(resistor && capacitor){
 resistor.addEventListener("input",atualizar);
 capacitor.addEventListener("input",atualizar);
 atualizar();
-
+}
 
 function carregarCapacitor(){
 
@@ -40,10 +45,13 @@ clearInterval(intervalo);
 },400);
 }
 
+window.carregarCapacitor = carregarCapacitor;
 
 function desenharGrafico(tau){
 
 let canvas=document.getElementById("graficoRC");
+if(!canvas) return;
+
 let ctx=canvas.getContext("2d");
 
 ctx.clearRect(0,0,700,400);
@@ -79,10 +87,7 @@ ctx.lineTo(x,y);
 ctx.stroke();
 }
 
-
-/* ================= NAVEGAÇÃO ================= */
-
-function abrirSecao(id){
+window.abrirSecao = function(id){
 
 document.querySelector(".home").style.display="none";
 
@@ -95,8 +100,7 @@ document.getElementById(id).classList.add("ativa");
 window.scrollTo(0,0);
 }
 
-
-function voltarHome(){
+window.voltarHome = function(){
 
 document.querySelector(".home").style.display="flex";
 
@@ -106,3 +110,5 @@ sec.classList.remove("ativa");
 
 window.scrollTo(0,0);
 }
+
+});
